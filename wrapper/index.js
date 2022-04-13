@@ -26,6 +26,7 @@ module.exports = class PaginationWrapper {
       this.authorIndependent = false,
       this.autoButton = false,
       this.autoDelButton = false,
+      this.selectMenu = false,
       this.pagination = null
    }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -197,7 +198,17 @@ module.exports = class PaginationWrapper {
     */
    enableAutoDelButton() {
       // Set and return
-      this.autoDelButton = true
+      this.autoDelButton = true;
+      return this;
+   }
+   // Set selectMenu
+   /**
+    * Enables selectMenu for your pagination
+    * @returns {PaginationWrapper}
+    */
+   enableSelectMenu() {
+      // Set and return
+      this.selectMenu = true;
       return this;
    }
 }
